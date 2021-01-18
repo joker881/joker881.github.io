@@ -68,6 +68,191 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-复习杂记九" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/" class="article-date">
+  <time datetime="2020-09-28T14:40:51.000Z" itemprop="datePublished">2020-09-28</time>
+</a>
+    
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/">复习杂记九</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://www.baidu.com/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/" data-id="ckk2lpqdv0009mcd890r0dmr1" class="article-share-link" data-share="baidu" data-title="复习杂记九">Share</a>
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-复习杂记八" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/" class="article-date">
+  <time datetime="2020-09-27T05:49:21.000Z" itemprop="datePublished">2020-09-27</time>
+</a>
+    
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/">复习杂记八</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h2 id="1-串的定义"><a href="#1-串的定义" class="headerlink" title="1.串的定义"></a>1.串的定义</h2><ul>
+<li>串: 字符串记为S=’a1a2…an’</li>
+<li>字串 : 串中任意个连续字符组成的子序列</li>
+<li>主串: 包含字串的串</li>
+<li>字符在主串中的位置: 从1开始</li>
+<li>空串 v.s 空格串</li>
+<li>串v.s线性表(串数据对象限定为字符集)</li>
+<li>基本操作: 以字串为操作对象<h2 id="2-基本操作"><a href="#2-基本操作" class="headerlink" title="2.基本操作"></a>2.基本操作</h2></li>
+<li>StrAssign(&amp;T,chars)</li>
+<li>StrCopy(&amp;T,S)</li>
+<li>StrEmpty(S)</li>
+<li>StrLength(S)</li>
+<li>ClearString(&amp;S)</li>
+<li>DestroyString(&amp;S)</li>
+<li>ConCat(&amp;T,S1,S2)</li>
+<li>SubString(Sub,S,pos,len)</li>
+<li>Index(S,T)</li>
+<li>StrCompare(S,T)<h2 id="3-字符集编码"><a href="#3-字符集编码" class="headerlink" title="3.字符集编码"></a>3.字符集编码</h2></li>
+<li>字符集(定义域)<blockquote>
+<p>英文字符–ASCII字符集<br><br>  中英文–Unicode字符集<br></p>
+</blockquote>
+</li>
+<li>编码方案(映射规则)<blockquote>
+<p>UTF-8<br><br>UTF-16<br></p>
+</blockquote>
+<h2 id="2-存储结构"><a href="#2-存储结构" class="headerlink" title="2.存储结构"></a>2.存储结构</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN 255 <span class="comment">//定长</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[MAXLEN];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;SString;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//不定长</span></span><br><span class="line"> <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">     <span class="keyword">char</span> *ch;</span><br><span class="line">     <span class="keyword">int</span> length;</span><br><span class="line"> &#125;HString;</span><br><span class="line"> HString S;</span><br><span class="line"> S.ch(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(MAXLEN * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));<span class="comment">//堆分配 动态数组</span></span><br><span class="line"> S.length = <span class="number">0</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>串的链式存储</li>
+</ul>
+<h2 id="3-串的朴素模式匹配"><a href="#3-串的朴素模式匹配" class="headerlink" title="3.串的朴素模式匹配"></a>3.串的朴素模式匹配</h2><ul>
+<li><p>串的模式匹配: 在主串中找到模式串相同的子串, 返回位置</p>
+<br>
+index(S,T)<br>
+</li>
+<li><p>问题</p>
+<blockquote>
+<p>若模式串与主串部分符合时, 会发生回溯<br></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4-KMP算法"><a href="#4-KMP算法" class="headerlink" title="4.KMP算法(?)"></a>4.KMP算法(?)</h2><ul>
+<li>主串指针不回溯, 模式串回溯</li>
+<li>理解Next数组</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://www.baidu.com/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/" data-id="ckk2lpqdz000gmcd856mubaxc" class="article-share-link" data-share="baidu" data-title="复习杂记八">Share</a>
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-复习杂记七" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/" class="article-date">
+  <time datetime="2020-09-19T09:00:13.000Z" itemprop="datePublished">2020-09-19</time>
+</a>
+    
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/">复习杂记七</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1>
+        
+          <p class="article-more-link">
+            <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/" data-id="ckk2lpqdt0005mcd8gw4bfo0y" class="article-share-link" data-share="baidu" data-title="复习杂记七">Share</a>
+      
+
+      
+
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-复习杂记六" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AD/" class="article-date">
@@ -101,7 +286,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AD/" data-id="ckf9fvmc3000dpgd8ekdmhz7t" class="article-share-link" data-share="baidu" data-title="复习杂记六">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AD/" data-id="ckk2lpqdx000cmcd8alcr0aie" class="article-share-link" data-share="baidu" data-title="复习杂记六">Share</a>
       
 
       
@@ -151,7 +336,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/18/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%BA%94/" data-id="ckf9fvmc10008pgd8hkvubo3y" class="article-share-link" data-share="baidu" data-title="复习杂记五">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/18/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%BA%94/" data-id="ckk2lpqdw000amcd8ghyrf9n5" class="article-share-link" data-share="baidu" data-title="复习杂记五">Share</a>
       
 
       
@@ -203,7 +388,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/17/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%9B%9B/" data-id="ckf9fvmc2000apgd806jdaxqs" class="article-share-link" data-share="baidu" data-title="复习杂记四">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/17/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%9B%9B/" data-id="ckk2lpqdy000emcd8bl2dbyvt" class="article-share-link" data-share="baidu" data-title="复习杂记四">Share</a>
       
 
       
@@ -255,7 +440,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%89/" data-id="ckf9fvmc00005pgd82r2ag5ke" class="article-share-link" data-share="baidu" data-title="复习杂记三">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%89/" data-id="ckk2lpqdu0006mcd826jf37xk" class="article-share-link" data-share="baidu" data-title="复习杂记三">Share</a>
       
 
       
@@ -307,7 +492,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B02/" data-id="ckf9fvmc00004pgd8e13ngcq0" class="article-share-link" data-share="baidu" data-title="复习杂记二">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B02/" data-id="ckk2lpqdq0002mcd8aewc6lbu" class="article-share-link" data-share="baidu" data-title="复习杂记二">Share</a>
       
 
       
@@ -359,7 +544,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/" data-id="ckf9fvmbs0000pgd8ad0d6wb2" class="article-share-link" data-share="baidu" data-title="复习杂记一">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/" data-id="ckk2lpqdt0004mcd8d2vjdtn0" class="article-share-link" data-share="baidu" data-title="复习杂记一">Share</a>
       
 
       
@@ -407,7 +592,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/14/%E4%B8%8B%E8%AE%BA%E6%96%87/" data-id="ckf9fvmbz0003pgd86gbsdg73" class="article-share-link" data-share="baidu" data-title="下论文">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/14/%E4%B8%8B%E8%AE%BA%E6%96%87/" data-id="ckk2lpqdp0001mcd87ovy42bx" class="article-share-link" data-share="baidu" data-title="下论文">Share</a>
       
 
       
@@ -426,100 +611,11 @@
 
 
   
-    <article id="post-无聊" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/11/%E6%97%A0%E8%81%8A/" class="article-date">
-  <time datetime="2020-09-11T13:07:25.000Z" itemprop="datePublished">2020-09-11</time>
-</a>
-    
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/11/%E6%97%A0%E8%81%8A/">无聊</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>线性代数越学越多（头秃</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://www.baidu.com/2020/09/11/%E6%97%A0%E8%81%8A/" data-id="ckf9fvmc4000fpgd88c9u5fhs" class="article-share-link" data-share="baidu" data-title="无聊">Share</a>
-      
-
-      
-
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 
 
-
-
-
-
-  
-    <article id="post-meow-meow-meow" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/06/meow-meow-meow/" class="article-date">
-  <time datetime="2020-09-06T15:09:25.000Z" itemprop="datePublished">2020-09-06</time>
-</a>
-    
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/06/meow-meow-meow/">meow meow meow</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://www.baidu.com/2020/09/06/meow-meow-meow/" data-id="ckf9fvmbw0001pgd8hbw7d6qf" class="article-share-link" data-share="baidu" data-title="meow meow meow">Share</a>
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
 </section>
       
       <aside id="sidebar">
@@ -530,7 +626,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -539,7 +635,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 20px;">操作系统</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 15px;">杂谈</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 15px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a>
+      <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 20px;">操作系统</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 10px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a>
     </div>
   </div>
 
@@ -548,7 +644,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
@@ -560,23 +656,23 @@
       <ul>
         
           <li>
+            <a href="/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/">复习杂记九</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/">复习杂记八</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/">复习杂记七</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AD/">复习杂记六</a>
           </li>
         
           <li>
             <a href="/2020/09/18/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%BA%94/">复习杂记五</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/17/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%9B%9B/">复习杂记四</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%89/">复习杂记三</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B02/">复习杂记二</a>
           </li>
         
       </ul>
@@ -610,7 +706,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
+      &copy; 2021 John Doe<br>
       Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>

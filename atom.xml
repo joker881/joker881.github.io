@@ -6,7 +6,7 @@
   <link href="https://www.baidu.com/atom.xml" rel="self"/>
   
   <link href="https://www.baidu.com/"/>
-  <updated>2020-09-19T08:57:56.268Z</updated>
+  <updated>2021-01-07T09:48:23.257Z</updated>
   <id>https://www.baidu.com/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复习杂记九</title>
+    <link href="https://www.baidu.com/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/"/>
+    <id>https://www.baidu.com/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/</id>
+    <published>2020-09-28T14:40:51.000Z</published>
+    <updated>2021-01-07T09:48:23.257Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;物理层&quot;&gt;&lt;a href=&quot;#物理层&quot; class=&quot;headerlink&quot; title=&quot;物理层&quot;&gt;&lt;/a&gt;物理层&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>复习杂记八</title>
+    <link href="https://www.baidu.com/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/"/>
+    <id>https://www.baidu.com/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/</id>
+    <published>2020-09-27T05:49:21.000Z</published>
+    <updated>2021-01-07T09:48:23.267Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h2 id="1-串的定义"><a href="#1-串的定义" class="headerlink" title="1.串的定义"></a>1.串的定义</h2><ul><li>串: 字符串记为S=’a1a2…an’</li><li>字串 : 串中任意个连续字符组成的子序列</li><li>主串: 包含字串的串</li><li>字符在主串中的位置: 从1开始</li><li>空串 v.s 空格串</li><li>串v.s线性表(串数据对象限定为字符集)</li><li>基本操作: 以字串为操作对象<h2 id="2-基本操作"><a href="#2-基本操作" class="headerlink" title="2.基本操作"></a>2.基本操作</h2></li><li>StrAssign(&amp;T,chars)</li><li>StrCopy(&amp;T,S)</li><li>StrEmpty(S)</li><li>StrLength(S)</li><li>ClearString(&amp;S)</li><li>DestroyString(&amp;S)</li><li>ConCat(&amp;T,S1,S2)</li><li>SubString(Sub,S,pos,len)</li><li>Index(S,T)</li><li>StrCompare(S,T)<h2 id="3-字符集编码"><a href="#3-字符集编码" class="headerlink" title="3.字符集编码"></a>3.字符集编码</h2></li><li>字符集(定义域)<blockquote><p>英文字符–ASCII字符集<br><br>  中英文–Unicode字符集<br></p></blockquote></li><li>编码方案(映射规则)<blockquote><p>UTF-8<br><br>UTF-16<br></p></blockquote><h2 id="2-存储结构"><a href="#2-存储结构" class="headerlink" title="2.存储结构"></a>2.存储结构</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN 255 <span class="comment">//定长</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[MAXLEN];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;SString;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//不定长</span></span><br><span class="line"> <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">     <span class="keyword">char</span> *ch;</span><br><span class="line">     <span class="keyword">int</span> length;</span><br><span class="line"> &#125;HString;</span><br><span class="line"> HString S;</span><br><span class="line"> S.ch(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(MAXLEN * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));<span class="comment">//堆分配 动态数组</span></span><br><span class="line"> S.length = <span class="number">0</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li>串的链式存储</li></ul><h2 id="3-串的朴素模式匹配"><a href="#3-串的朴素模式匹配" class="headerlink" title="3.串的朴素模式匹配"></a>3.串的朴素模式匹配</h2><ul><li><p>串的模式匹配: 在主串中找到模式串相同的子串, 返回位置</p><br>index(S,T)<br></li><li><p>问题</p><blockquote><p>若模式串与主串部分符合时, 会发生回溯<br></p></blockquote></li></ul><h2 id="4-KMP算法"><a href="#4-KMP算法" class="headerlink" title="4.KMP算法(?)"></a>4.KMP算法(?)</h2><ul><li>主串指针不回溯, 模式串回溯</li><li>理解Next数组</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;串&quot;&gt;&lt;a href=&quot;#串&quot; class=&quot;headerlink&quot; title=&quot;串&quot;&gt;&lt;/a&gt;串&lt;/h1&gt;&lt;h2 id=&quot;1-串的定义&quot;&gt;&lt;a href=&quot;#1-串的定义&quot; class=&quot;headerlink&quot; title=&quot;1.串的定义&quot;&gt;&lt;/a&gt;1.串的定</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>复习杂记七</title>
+    <link href="https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/"/>
+    <id>https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/</id>
+    <published>2020-09-19T09:00:13.000Z</published>
+    <updated>2020-09-29T09:47:35.839Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><a id="more"></a><h2 id="1-数据通信模型"><a href="#1-数据通信模型" class="headerlink" title="1.数据通信模型"></a>1.数据通信模型</h2><p>信道具有方向性<br></p><ul><li><p>三种通信方式</p><blockquote><p>单工通信(广播):要一条信道<br><br>半双工通信(对讲机):要两条信道<br><br>全双工(打电话):两条<br></p></blockquote></li><li><p>两种传输方式</p><blockquote><p>串行传输:速度慢,费用低,远距离<br><br>并行传输:速度快,费用高,近距离<br></p></blockquote></li><li><p>同步/异步</p><h2 id="2-码元等"><a href="#2-码元等" class="headerlink" title="2.码元等"></a>2.码元等</h2></li><li><p>码元:用一个固定时长的信号波形(数字脉冲),代表不同离散值的基本波形时.</p><blockquote><p>一个码元可以携带多个比特的信息量<br></p></blockquote></li><li><p>速率: 码元传输速率, 信息传输速率.</p><blockquote><p>码元: 单位波特B, 码元速率与进制无关,只和码元长度有关<br><br>信息传输速率: 单位时间传输二进制码元的个数(比特数)<br></p></blockquote></li><li><p>带宽</p><blockquote><p>模拟信号系统: 通频带宽<br><br>数字设备: 比特每秒<br></p></blockquote></li></ul><h2 id="3-考点91-奈氏准则-amp-香农定理"><a href="#3-考点91-奈氏准则-amp-香农定理" class="headerlink" title="3.考点91:奈氏准则&amp;香农定理"></a>3.考点91:奈氏准则&amp;香农定理</h2><ul><li><p>失真</p><blockquote><p>现实信道(带宽受限,有噪声,干扰)<br><br>影响因素:1.码元传输率<br><br> 2.信号传输距离<br><br> 3.噪声干扰<br><br> 4.媒体质量<br></p></blockquote></li><li><p>引例–码间串扰</p><blockquote><p>定义:接收端收到的信号波形失去了码元之间清晰界限的现象<br><br>  传输过快,失去了清晰界限<br><br>  无噪声,带宽受限条件下, 极限码元传输速率为2W Baud, W是信道带宽, 单位为Hz.(<strong>限制码元传输速度</strong>)<br><br>  极限数据传输率: 2Wlog2V(b/s)<br><br>  由于马元的传输速率受奈氏准则的制约, 所以要提高数据传输率,就必须使每个码元携带更多的数据量,这需要采用多元制的调制方法.<br></p></blockquote></li><li><p>香农定理(<strong>规定比特极限传输速率</strong>)</p><blockquote><p>极限数据传输速率 = Wlog2(1+S/N) (bps)<br><br>信噪比(dB) = 10lg(S/N)<br><br>信噪比 = 信号平均功率/噪声平均功率 = S/N<br><br>如果W或者S/N无上限, 则运输传输率无上限</p></blockquote></li><li><p>理解Nice与香农</p><blockquote><p>奈氏(内忧):带宽受限无噪声, 码元传输速率上限<br><br>香农(外患): 带宽首先有噪声的信息传输率<br><br>无噪声选奈氏,有噪声且有V两个都选取最小.<br><br>例: 二进制信号在信噪比为127:1的4kHz信道上传输,最大数据传输率为?</p>  <br>  nice: 2x4000 x log2 2 = 8000b/s<br>  香农: 4000 x log2 (1+127) = 2800b/s<br></blockquote><h2 id="4-编码-amp-调制"><a href="#4-编码-amp-调制" class="headerlink" title="4.编码&amp;调制"></a>4.编码&amp;调制</h2></li><li><p>基带信号 : 来自信源的信号, 将数字信号1和0用不同电压表达,再送到数字信道上传输(基带传输).</p><blockquote><p>如何表达0/1, 这就是编码<br></p></blockquote></li><li><p>宽带信号: 将基带信号调制成频分复用模拟信号, 再传送到模拟信道上传输(宽带信号).</p></li><li><p>非归零码 NRZ : 高1低零</p><blockquote><p>难以同步<br></p></blockquote></li><li><p>归零编码 : 在每一个码元内都要归为零<br></p></li><li><p>反向不归零编码: 数据翻转为0 , 不反转为1</p></li><li><p>曼彻斯特编码: 用跳变表示0/1, 或者时钟信号</p></li><li><p>差分曼彻斯特编码: 前半个码元的电平与上一个码元后半部分的电平相同则为1, 否则为0</p></li></ul><h2 id="5-数据交换"><a href="#5-数据交换" class="headerlink" title="5.数据交换"></a>5.数据交换</h2>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;物理层&quot;&gt;&lt;a href=&quot;#物理层&quot; class=&quot;headerlink&quot; title=&quot;物理层&quot;&gt;&lt;/a&gt;物理层&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="计算机网络" scheme="https://www.baidu.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>复习杂记六</title>

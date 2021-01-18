@@ -4,19 +4,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>复习杂记一 | Elliot</title>
+  <title>复习杂记七 | Elliot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作系统概述">
+  <meta name="description" content="物理层">
 <meta property="og:type" content="article">
-<meta property="og:title" content="复习杂记一">
-<meta property="og:url" content="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/index.html">
+<meta property="og:title" content="复习杂记七">
+<meta property="og:url" content="https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/index.html">
 <meta property="og:site_name" content="Elliot">
-<meta property="og:description" content="操作系统概述">
+<meta property="og:description" content="物理层">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-16T06:14:50.000Z">
-<meta property="article:modified_time" content="2020-09-16T12:17:03.035Z">
+<meta property="article:published_time" content="2020-09-19T09:00:13.000Z">
+<meta property="article:modified_time" content="2020-09-29T09:47:35.839Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="操作系统">
+<meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Elliot" type="application/atom+xml">
@@ -71,10 +71,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-复习杂记" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-复习杂记七" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/" class="article-date">
-  <time datetime="2020-09-16T06:14:50.000Z" itemprop="datePublished">2020-09-16</time>
+    <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/" class="article-date">
+  <time datetime="2020-09-19T09:00:13.000Z" itemprop="datePublished">2020-09-19</time>
 </a>
     
 
@@ -86,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      复习杂记一
+      复习杂记七
     </h1>
   
 
@@ -94,47 +94,94 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><a id="more"></a>
+        <h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><a id="more"></a>
+<h2 id="1-数据通信模型"><a href="#1-数据通信模型" class="headerlink" title="1.数据通信模型"></a>1.数据通信模型</h2><p>信道具有方向性<br></p>
 <ul>
-<li>内核程序&amp;应用程序<blockquote>
-<p>内核程序构成内核<br>  一个操作系统只要内核就够了（docker）<br>可执行特权指令（操作系统管理者内核执行）</p>
+<li><p>三种通信方式</p>
+<blockquote>
+<p>单工通信(广播):要一条信道<br><br>半双工通信(对讲机):要两条信道<br><br>全双工(打电话):两条<br></p>
 </blockquote>
 </li>
-<li>内核态（目态）&amp;用户态（管态）<blockquote>
-<p>cpu现在运行什么程序就是什么态<br>psw 0用户，1内核态</p>
+<li><p>两种传输方式</p>
+<blockquote>
+<p>串行传输:速度慢,费用低,远距离<br><br>并行传输:速度快,费用高,近距离<br></p>
 </blockquote>
 </li>
-<li>内核态与用户态的转换<blockquote>
-<p>执行修改psw标志位的指令<br>中断 用户-&gt;内核 操作系统的夺回特权</p>
+<li><p>同步/异步</p>
+<h2 id="2-码元等"><a href="#2-码元等" class="headerlink" title="2.码元等"></a>2.码元等</h2></li>
+<li><p>码元:用一个固定时长的信号波形(数字脉冲),代表不同离散值的基本波形时.</p>
+<blockquote>
+<p>一个码元可以携带多个比特的信息量<br></p>
 </blockquote>
 </li>
-<li>中断与异常<blockquote>
-<p>中断是操作系统内核夺回控制权的唯一途径<br>   无中断，做不到并发<br>   内中断： 恶意软件试图在用户态执行特权指令。指令参数非  法。陷入指令（非特权指令）。  故障。<br>   外中断 ：时钟中断（多道的基础）。I/O中断。<br>   根据中断信号的不同，有相应的中断处理程序（内核程序）。中断向量表。</p>
+<li><p>速率: 码元传输速率, 信息传输速率.</p>
+<blockquote>
+<p>码元: 单位波特B, 码元速率与进制无关,只和码元长度有关<br><br>信息传输速率: 单位时间传输二进制码元的个数(比特数)<br></p>
 </blockquote>
-<ul>
-<li>系统调用<blockquote>
-<p>应用程序程序员请求操作系统服务的途径<br>库函数使用了系统调用<br>系统调用比库函数底层<br>库函数暴露接口，不一定使用了系统调用<br>系统对共享资源统一管理，而应用程序只能发起系统调用来使用。eg. 访问任何共享资源，都要系统调用。<br>trap指令，访管指令</p>
+</li>
+<li><p>带宽</p>
+<blockquote>
+<p>模拟信号系统: 通频带宽<br><br>数字设备: 比特每秒<br></p>
 </blockquote>
 </li>
 </ul>
-</li>
-<li>操作系统体系结构<blockquote>
-<p>1.时钟管理。中断处理。原语<br>  2.进程管理。存储器管理。设备管理。（可以踢出内核）<br>  微内核 2 六次变态<br>  大内核 1,2 两次变态</p>
+<h2 id="3-考点91-奈氏准则-amp-香农定理"><a href="#3-考点91-奈氏准则-amp-香农定理" class="headerlink" title="3.考点91:奈氏准则&amp;香农定理"></a>3.考点91:奈氏准则&amp;香农定理</h2><ul>
+<li><p>失真</p>
+<blockquote>
+<p>现实信道(带宽受限,有噪声,干扰)<br><br>影响因素:1.码元传输率<br><br> 2.信号传输距离<br><br> 3.噪声干扰<br><br> 4.媒体质量<br></p>
 </blockquote>
 </li>
+<li><p>引例–码间串扰</p>
+<blockquote>
+<p>定义:接收端收到的信号波形失去了码元之间清晰界限的现象<br><br>  传输过快,失去了清晰界限<br><br>  无噪声,带宽受限条件下, 极限码元传输速率为2W Baud, W是信道带宽, 单位为Hz.(<strong>限制码元传输速度</strong>)<br><br>  极限数据传输率: 2Wlog2V(b/s)<br><br>  由于马元的传输速率受奈氏准则的制约, 所以要提高数据传输率,就必须使每个码元携带更多的数据量,这需要采用多元制的调制方法.<br></p>
+</blockquote>
+</li>
+<li><p>香农定理(<strong>规定比特极限传输速率</strong>)</p>
+<blockquote>
+<p>极限数据传输速率 = Wlog2(1+S/N) (bps)<br><br>信噪比(dB) = 10lg(S/N)<br><br>信噪比 = 信号平均功率/噪声平均功率 = S/N<br><br>如果W或者S/N无上限, 则运输传输率无上限</p>
+</blockquote>
+</li>
+<li><p>理解Nice与香农</p>
+<blockquote>
+<p>奈氏(内忧):带宽受限无噪声, 码元传输速率上限<br><br>香农(外患): 带宽首先有噪声的信息传输率<br><br>无噪声选奈氏,有噪声且有V两个都选取最小.<br><br>例: 二进制信号在信噪比为127:1的4kHz信道上传输,最大数据传输率为?</p>
+  <br>
+  nice: 2x4000 x log2 2 = 8000b/s<br>
+  香农: 4000 x log2 (1+127) = 2800b/s<br>
+</blockquote>
+<h2 id="4-编码-amp-调制"><a href="#4-编码-amp-调制" class="headerlink" title="4.编码&amp;调制"></a>4.编码&amp;调制</h2></li>
+<li><p>基带信号 : 来自信源的信号, 将数字信号1和0用不同电压表达,再送到数字信道上传输(基带传输).</p>
+<blockquote>
+<p>如何表达0/1, 这就是编码<br></p>
+</blockquote>
+</li>
+<li><p>宽带信号: 将基带信号调制成频分复用模拟信号, 再传送到模拟信道上传输(宽带信号).</p>
+</li>
+<li><p>非归零码 NRZ : 高1低零</p>
+<blockquote>
+<p>难以同步<br></p>
+</blockquote>
+</li>
+<li><p>归零编码 : 在每一个码元内都要归为零<br></p>
+</li>
+<li><p>反向不归零编码: 数据翻转为0 , 不反转为1</p>
+</li>
+<li><p>曼彻斯特编码: 用跳变表示0/1, 或者时钟信号</p>
+</li>
+<li><p>差分曼彻斯特编码: 前半个码元的电平与上一个码元后半部分的电平相同则为1, 否则为0</p>
+</li>
 </ul>
-
+<h2 id="5-数据交换"><a href="#5-数据交换" class="headerlink" title="5.数据交换"></a>5.数据交换</h2>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/" data-id="ckk2lpqdt0004mcd8d2vjdtn0" class="article-share-link" data-share="baidu" data-title="复习杂记一">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/" data-id="ckk2lpqdt0005mcd8gw4bfo0y" class="article-share-link" data-share="baidu" data-title="复习杂记七">Share</a>
       
 
       
 
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
 
     </footer>
   </div>
@@ -142,19 +189,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B02/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          复习杂记二
+          复习杂记八
         
       </div>
     </a>
   
   
-    <a href="/2020/09/14/%E4%B8%8B%E8%AE%BA%E6%96%87/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AD/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">下论文</div>
+      <div class="article-nav-title">复习杂记六</div>
     </a>
   
 </nav>

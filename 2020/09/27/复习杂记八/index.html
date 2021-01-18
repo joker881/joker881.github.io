@@ -4,19 +4,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>复习杂记一 | Elliot</title>
+  <title>复习杂记八 | Elliot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作系统概述">
+  <meta name="description" content="串1.串的定义 串: 字符串记为S&#x3D;’a1a2…an’ 字串 : 串中任意个连续字符组成的子序列 主串: 包含字串的串 字符在主串中的位置: 从1开始 空串 v.s 空格串 串v.s线性表(串数据对象限定为字符集) 基本操作: 以字串为操作对象2.基本操作 StrAssign(&amp;T,chars) StrCopy(&amp;T,S) StrEmpty(S) StrLength(S) Clea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="复习杂记一">
-<meta property="og:url" content="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/index.html">
+<meta property="og:title" content="复习杂记八">
+<meta property="og:url" content="https://www.baidu.com/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/index.html">
 <meta property="og:site_name" content="Elliot">
-<meta property="og:description" content="操作系统概述">
+<meta property="og:description" content="串1.串的定义 串: 字符串记为S&#x3D;’a1a2…an’ 字串 : 串中任意个连续字符组成的子序列 主串: 包含字串的串 字符在主串中的位置: 从1开始 空串 v.s 空格串 串v.s线性表(串数据对象限定为字符集) 基本操作: 以字串为操作对象2.基本操作 StrAssign(&amp;T,chars) StrCopy(&amp;T,S) StrEmpty(S) StrLength(S) Clea">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-16T06:14:50.000Z">
-<meta property="article:modified_time" content="2020-09-16T12:17:03.035Z">
+<meta property="article:published_time" content="2020-09-27T05:49:21.000Z">
+<meta property="article:modified_time" content="2021-01-07T09:48:23.267Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Elliot" type="application/atom+xml">
@@ -71,10 +70,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-复习杂记" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-复习杂记八" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/" class="article-date">
-  <time datetime="2020-09-16T06:14:50.000Z" itemprop="datePublished">2020-09-16</time>
+    <a href="/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/" class="article-date">
+  <time datetime="2020-09-27T05:49:21.000Z" itemprop="datePublished">2020-09-27</time>
 </a>
     
 
@@ -86,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      复习杂记一
+      复习杂记八
     </h1>
   
 
@@ -94,67 +93,79 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><a id="more"></a>
-<ul>
-<li>内核程序&amp;应用程序<blockquote>
-<p>内核程序构成内核<br>  一个操作系统只要内核就够了（docker）<br>可执行特权指令（操作系统管理者内核执行）</p>
+        <h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h2 id="1-串的定义"><a href="#1-串的定义" class="headerlink" title="1.串的定义"></a>1.串的定义</h2><ul>
+<li>串: 字符串记为S=’a1a2…an’</li>
+<li>字串 : 串中任意个连续字符组成的子序列</li>
+<li>主串: 包含字串的串</li>
+<li>字符在主串中的位置: 从1开始</li>
+<li>空串 v.s 空格串</li>
+<li>串v.s线性表(串数据对象限定为字符集)</li>
+<li>基本操作: 以字串为操作对象<h2 id="2-基本操作"><a href="#2-基本操作" class="headerlink" title="2.基本操作"></a>2.基本操作</h2></li>
+<li>StrAssign(&amp;T,chars)</li>
+<li>StrCopy(&amp;T,S)</li>
+<li>StrEmpty(S)</li>
+<li>StrLength(S)</li>
+<li>ClearString(&amp;S)</li>
+<li>DestroyString(&amp;S)</li>
+<li>ConCat(&amp;T,S1,S2)</li>
+<li>SubString(Sub,S,pos,len)</li>
+<li>Index(S,T)</li>
+<li>StrCompare(S,T)<h2 id="3-字符集编码"><a href="#3-字符集编码" class="headerlink" title="3.字符集编码"></a>3.字符集编码</h2></li>
+<li>字符集(定义域)<blockquote>
+<p>英文字符–ASCII字符集<br><br>  中英文–Unicode字符集<br></p>
 </blockquote>
 </li>
-<li>内核态（目态）&amp;用户态（管态）<blockquote>
-<p>cpu现在运行什么程序就是什么态<br>psw 0用户，1内核态</p>
+<li>编码方案(映射规则)<blockquote>
+<p>UTF-8<br><br>UTF-16<br></p>
 </blockquote>
+<h2 id="2-存储结构"><a href="#2-存储结构" class="headerlink" title="2.存储结构"></a>2.存储结构</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN 255 <span class="comment">//定长</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[MAXLEN];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;SString;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//不定长</span></span><br><span class="line"> <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">     <span class="keyword">char</span> *ch;</span><br><span class="line">     <span class="keyword">int</span> length;</span><br><span class="line"> &#125;HString;</span><br><span class="line"> HString S;</span><br><span class="line"> S.ch(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(MAXLEN * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));<span class="comment">//堆分配 动态数组</span></span><br><span class="line"> S.length = <span class="number">0</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>串的链式存储</li>
+</ul>
+<h2 id="3-串的朴素模式匹配"><a href="#3-串的朴素模式匹配" class="headerlink" title="3.串的朴素模式匹配"></a>3.串的朴素模式匹配</h2><ul>
+<li><p>串的模式匹配: 在主串中找到模式串相同的子串, 返回位置</p>
+<br>
+index(S,T)<br>
 </li>
-<li>内核态与用户态的转换<blockquote>
-<p>执行修改psw标志位的指令<br>中断 用户-&gt;内核 操作系统的夺回特权</p>
-</blockquote>
-</li>
-<li>中断与异常<blockquote>
-<p>中断是操作系统内核夺回控制权的唯一途径<br>   无中断，做不到并发<br>   内中断： 恶意软件试图在用户态执行特权指令。指令参数非  法。陷入指令（非特权指令）。  故障。<br>   外中断 ：时钟中断（多道的基础）。I/O中断。<br>   根据中断信号的不同，有相应的中断处理程序（内核程序）。中断向量表。</p>
-</blockquote>
-<ul>
-<li>系统调用<blockquote>
-<p>应用程序程序员请求操作系统服务的途径<br>库函数使用了系统调用<br>系统调用比库函数底层<br>库函数暴露接口，不一定使用了系统调用<br>系统对共享资源统一管理，而应用程序只能发起系统调用来使用。eg. 访问任何共享资源，都要系统调用。<br>trap指令，访管指令</p>
+<li><p>问题</p>
+<blockquote>
+<p>若模式串与主串部分符合时, 会发生回溯<br></p>
 </blockquote>
 </li>
 </ul>
-</li>
-<li>操作系统体系结构<blockquote>
-<p>1.时钟管理。中断处理。原语<br>  2.进程管理。存储器管理。设备管理。（可以踢出内核）<br>  微内核 2 六次变态<br>  大内核 1,2 两次变态</p>
-</blockquote>
-</li>
+<h2 id="4-KMP算法"><a href="#4-KMP算法" class="headerlink" title="4.KMP算法(?)"></a>4.KMP算法(?)</h2><ul>
+<li>主串指针不回溯, 模式串回溯</li>
+<li>理解Next数组</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://www.baidu.com/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0/" data-id="ckk2lpqdt0004mcd8d2vjdtn0" class="article-share-link" data-share="baidu" data-title="复习杂记一">Share</a>
+        <a data-url="https://www.baidu.com/2020/09/27/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E5%85%AB/" data-id="ckk2lpqdz000gmcd856mubaxc" class="article-share-link" data-share="baidu" data-title="复习杂记八">Share</a>
       
 
       
 
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/09/16/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B02/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/28/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B9%9D/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          复习杂记二
+          复习杂记九
         
       </div>
     </a>
   
   
-    <a href="/2020/09/14/%E4%B8%8B%E8%AE%BA%E6%96%87/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/19/%E5%A4%8D%E4%B9%A0%E6%9D%82%E8%AE%B0%E4%B8%83/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">下论文</div>
+      <div class="article-nav-title">复习杂记七</div>
     </a>
   
 </nav>

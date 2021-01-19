@@ -6,7 +6,7 @@
   <link href="https://www.baidu.com/atom.xml" rel="self"/>
   
   <link href="https://www.baidu.com/"/>
-  <updated>2021-01-07T09:48:23.257Z</updated>
+  <updated>2021-01-19T11:26:17.473Z</updated>
   <id>https://www.baidu.com/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日报一</title>
+    <link href="https://www.baidu.com/2021/01/19/%E6%97%A5%E6%8A%A5%E4%B8%80/"/>
+    <id>https://www.baidu.com/2021/01/19/%E6%97%A5%E6%8A%A5%E4%B8%80/</id>
+    <published>2021-01-19T11:22:31.000Z</published>
+    <updated>2021-01-19T11:26:17.473Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>刷了剑指offer JZ1-JZ11</li><li>在云主机上安装了riscv交叉编译环境</li><li>看了一篇量子计算的论文，注册了个IBM量子计算的帐号</li><li>安装好pyqt的环境，毕业设计需要做UI</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;刷了剑指offer JZ1-JZ11&lt;/li&gt;
+&lt;li&gt;在云主机上安装了riscv交叉编译环境&lt;/li&gt;
+&lt;li&gt;看了一篇量子计算的论文，注册了个IBM量子计算的帐号&lt;/li&gt;
+&lt;li&gt;安装好pyqt的环境，毕业设计需要做UI&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="日报" scheme="https://www.baidu.com/tags/%E6%97%A5%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;量子计算随想&#39;</title>
+    <link href="https://www.baidu.com/2021/01/18/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97%E9%9A%8F%E6%83%B3/"/>
+    <id>https://www.baidu.com/2021/01/18/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97%E9%9A%8F%E6%83%B3/</id>
+    <published>2021-01-18T13:27:54.000Z</published>
+    <updated>2021-01-18T13:30:39.686Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="量子计算的基本概念"><a href="#量子计算的基本概念" class="headerlink" title="量子计算的基本概念"></a>量子计算的基本概念</h1><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;量子计算的基本概念&quot;&gt;&lt;a href=&quot;#量子计算的基本概念&quot; class=&quot;headerlink&quot; title=&quot;量子计算的基本概念&quot;&gt;&lt;/a&gt;量子计算的基本概念&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="量子计算" scheme="https://www.baidu.com/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>复习杂记九</title>
